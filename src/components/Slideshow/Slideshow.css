@@ -1,0 +1,20 @@
+article{
+    margin-top:100px;
+    margin-left: 50px;
+}
+.main-image img{
+    height: 500px;
+    width: 500px;
+    border-radius: 15px;
+}
+
+.thumbnail-images-wrapper{
+    display:flex;
+    gap:34px;
+    margin-top:15px;
+}
+.thumbnail-image img{
+    height:100;
+    width: 100px;
+    border-radius: 15px;
+}

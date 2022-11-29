@@ -1,9 +1,3 @@
-:root{
-    --orange-clr :hsl(26, 100%, 55%);
-    --pale-orange-clr :hsl(25, 100%, 94%);
-    --light-gray-clr :hsl(220, 14%, 75%);
-    --dark-gray-clr : hsl(219, 9%, 45%);
-}
 header{
     display: flex;
     justify-content: space-between;

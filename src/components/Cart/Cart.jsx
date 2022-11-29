@@ -1,16 +1,18 @@
 import React from "react";
 
-export default function Cart() {
+import "./Cart.css";
+
+export default function Cart({ price, quantity }) {
   return (
     <div className="cart">
       <div className="cart-title">Cart</div>
       <div className="cart-item">
         <div className="item-img">
-          <img src="http://placehold.it/" />
+          <img src="/images/image-product-1-thumbnail.jpg" />
         </div>
         <div className="product-infos">
-          <p className="product-title"></p>
-          <p className="product-price"></p>
+          <p className="product-title">Fall Limited Edition Sneakers</p>
+          <p className="product-price">$125.00</p>
         </div>
         <div className="delete-btn">
           <button>
@@ -25,6 +27,7 @@ export default function Cart() {
           </button>
         </div>
       </div>
+      <button className="checkout-btn">Checkout</button>
     </div>
   );
 }

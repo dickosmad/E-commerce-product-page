@@ -2,7 +2,7 @@ import React from "react";
 
 import "./ProductDetail.css";
 
-export default function ProductDetail() {
+export default function ProductDetail({ quantity, setQuantity }) {
   return (
     <article className="product-detail-container">
       <p className="product-company">Sneaker Company</p>
@@ -27,7 +27,12 @@ export default function ProductDetail() {
               />
             </svg>
           </button>
-          <input type="number" value={3} aria-label="product-quantity" />
+          <input
+            type="number"
+            onChange={(evt) => setQuantity(evt.target.value)}
+            value={quantity}
+            aria-label="product-quantity"
+          />
           <button className="plus">
             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
               <path

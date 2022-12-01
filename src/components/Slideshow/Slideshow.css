@@ -2,6 +2,9 @@ article{
     margin-top:100px;
     margin-left: 50px;
 }
+.main-image {
+    position: relative;
+}
 .main-image img{
     height: 500px;
     width: 500px;
@@ -18,3 +21,99 @@ article{
     width: 100px;
     border-radius: 15px;
 }
+.main-image button{
+    display:none;
+}
+.main-image button:hover{
+    cursor: pointer;
+}
+.main-image .next-arrow{  
+    position: absolute;
+    top: 50%;
+    right: 24px;
+}
+.main-image .previous-arrow{ 
+    position: absolute;
+    top: 50%;
+    left: 24px
+}
+@media (max-width: 1010px) {
+    .slideshow-image{
+        display:flex;
+        gap:1rem;
+    }
+    .main-image img{
+        height: 500px;
+        width: 730px;
+    }
+  }
+  @media (max-width: 1000px) {
+    article{
+        margin-top:50px;
+        margin-left: 10px;
+    }
+    .main-image img{
+        height: 530px;
+        width: 730px;
+        border-radius: 5px;
+    }
+    .thumbnail-images-wrapper{
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+        margin-top:5px;
+    }
+    .thumbnail-image img{
+        height:120;
+        width: 120px;
+        border-radius: 5px;
+    }
+  }
+  @media (max-width: 820px) {
+    .main-image img {
+        height: 530px;
+        width: 645px;
+        border-radius: 5px;
+    }
+    
+  }
+  @media (max-width: 780px) {
+    article{
+        margin-top:5px;
+        margin-left: 1px;
+    }
+    .main-image img {
+        height: 530px;
+        width: 645px;
+        border-radius: 5px;
+    }
+    .thumbnail-images-wrapper{
+        display:none
+    }
+    .main-image button{
+        display:block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: none;
+        padding: 5px;
+    }
+    .main-image img {
+        position: relative;
+        height: 580px;
+        width: 100vw;
+        border-radius: 5px;
+    }
+  }
+  @media (max-width: 720px) {    
+    .main-image button{
+        display:block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        border: none;
+        padding: 5px;
+    }
+
+   
+  }

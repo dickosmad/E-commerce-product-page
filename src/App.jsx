@@ -8,15 +8,22 @@ import data from "./data";
 
 function App() {
   const [price, setPrice] = useState(250);
-  const [quantity, setQuantity] = useState(1);
-  const DISCOUNT = 50;
+  const [quantity, setQuantity] = useState(0);
+  const [showCart, setShowCart] = useState(false);
+  const handlePriceChange = (discount) => setPrice(discount);
+
   return (
     <div className="container">
-      <Menu />
-      <Cart price={price} quantity={quantity} />
+      <Menu setShowCart={setShowCart} quantity={quantity} />
+      {showCart && <Cart price={price} quantity={quantity} />}
       <main>
         <Slideshow data={data} />
-        <ProductDetail quantity={quantity} setQuantity={setQuantity} />
+        <ProductDetail
+          price={price}
+          quantity={quantity}
+          onPriceChange={handlePriceChange}
+          setQuantity={setQuantity}
+        />
       </main>
     </div>
   );

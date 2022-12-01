@@ -13,6 +13,28 @@ export default function Slideshow({ data }) {
       <div className="slideshow-image">
         <div className="main-image">
           <img src={data[currentImg].imgUrl} alt={data[currentImg].alt} />
+          <button className="next-arrow" onClick={gotoNextImg}>
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m2 1 8 8-8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
+          <button className="previous-arrow" onClick={gotoNextImg}>
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11 1 3 9l8 8"
+                stroke="#1D2026"
+                stroke-width="3"
+                fill="none"
+                fill-rule="evenodd"
+              />
+            </svg>
+          </button>
         </div>
         <div className="thumbnail-images-wrapper">
           {data?.map(({ thumbnailUrl, alt, id }, index) => (

@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import "./ProductDetail.css";
 
-export default function ProductDetail({ quantity, setQuantity }) {
+export default function ProductDetail({
+  onPriceChange,
+  price,
+  quantity,
+  setQuantity,
+}) {
+  const priceWithDiscount = (Number(price) * 50) / 100;
+  useEffect(() => {
+    onPriceChange(priceWithDiscount);
+  }, []);
   return (
     <article className="product-detail-container">
       <p className="product-company">Sneaker Company</p>
@@ -13,13 +22,20 @@ export default function ProductDetail({ quantity, setQuantity }) {
         weather can offer.
       </p>
       <div className="price">
-        <p className="discount-price">$125.00</p>
-        <span className="discount">50%</span>
+        <div className="discount-group">
+          <p className="discount-price">
+            ${Number(priceWithDiscount).toFixed(2)}
+          </p>
+          <span className="discount">50%</span>
+        </div>
+        <p className="original-price">$250.00</p>
       </div>
-      <p className="original-price">$250.00</p>
       <div className="add-to-cart">
         <div className="quantity">
-          <button className="minus">
+          <button
+            className="minus"
+            onClick={() => setQuantity((prev) => (prev === 0 ? 0 : prev - 1))}
+          >
             <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
@@ -33,7 +49,10 @@ export default function ProductDetail({ quantity, setQuantity }) {
             value={quantity}
             aria-label="product-quantity"
           />
-          <button className="plus">
+          <button
+            className="plus"
+            onClick={() => setQuantity((prev) => prev + 1)}
+          >
             <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"

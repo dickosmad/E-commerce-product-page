@@ -18,3 +18,11 @@
 main{
   display:flex;
 }
+@media (max-width: 1010px) {
+  main{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

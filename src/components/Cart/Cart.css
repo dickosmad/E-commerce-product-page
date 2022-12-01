@@ -16,6 +16,18 @@
     font-weight: bold;
     border-bottom: 1px solid var(--light-gray-clr);
 }
+.cart-items-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+.cart-empty{
+    min-height: 195px;
+    min-width: 319px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+}
 .cart-item{
     margin: 23px 10px 23px 10px;
     display: flex;
@@ -34,6 +46,11 @@
     flex-direction: column;
     gap: 3px;
     color: var(--light-gray-clr);
+}
+.cart-item .product-infos .product-price span{
+    margin-left:10px;
+    font-weight: bold;
+    color:black;
 }
 .delete-btn button:hover{
     cursor: pointer;

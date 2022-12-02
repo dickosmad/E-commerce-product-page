@@ -2,16 +2,9 @@ import React, { useEffect } from "react";
 
 import "./ProductDetail.css";
 
-export default function ProductDetail({
-  onPriceChange,
-  price,
-  quantity,
-  setQuantity,
-}) {
+export default function ProductDetail({ price, quantity, setQuantity }) {
   const priceWithDiscount = (Number(price) * 50) / 100;
-  useEffect(() => {
-    onPriceChange(priceWithDiscount);
-  }, []);
+
   return (
     <article className="product-detail-container">
       <p className="product-company">Sneaker Company</p>

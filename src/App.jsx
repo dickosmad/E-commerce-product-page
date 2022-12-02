@@ -7,12 +7,11 @@ import Slideshow from "./components/Slideshow";
 import data from "./data";
 
 function App() {
-  const [price, setPrice] = useState(250);
+  const [price] = useState(250);
   const [quantity, setQuantity] = useState(0);
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const handlePriceChange = (discount) => setPrice(discount);
 
   return (
     <div className={`container ${showMenu ? "overlay" : ""}`}>
@@ -34,7 +33,6 @@ function App() {
         <ProductDetail
           price={price}
           quantity={quantity}
-          onPriceChange={handlePriceChange}
           setQuantity={setQuantity}
         />
       </main>

@@ -3,6 +3,7 @@ import React from "react";
 import "./Cart.css";
 
 export default function Cart({ setShowCart, price, quantity }) {
+  const priceWithDiscount = (Number(price) * 50) / 100;
   return (
     <div
       onMouseEnter={() => setShowCart(true)}
@@ -25,7 +26,7 @@ export default function Cart({ setShowCart, price, quantity }) {
                 <p className="product-title">Fall Limited Edition Sneakers</p>
                 <p className="product-price">
                   ${price.toFixed(2)} x {quantity}
-                  <span>${(quantity * price).toFixed(2)}</span>{" "}
+                  <span>${(quantity * priceWithDiscount).toFixed(2)}</span>{" "}
                 </p>
               </div>
               <div className="delete-btn">

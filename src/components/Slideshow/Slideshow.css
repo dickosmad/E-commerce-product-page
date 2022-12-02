@@ -16,6 +16,7 @@ article{
 .active-image {
     border:2px solid var(--orange-clr);
     border-radius: 15px;
+    opacity: .7;
 }
 .thumbnail-images-wrapper{
     display:flex;

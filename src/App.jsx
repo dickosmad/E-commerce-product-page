@@ -10,11 +10,18 @@ function App() {
   const [price, setPrice] = useState(250);
   const [quantity, setQuantity] = useState(0);
   const [showCart, setShowCart] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const handlePriceChange = (discount) => setPrice(discount);
 
   return (
-    <div className="container">
-      <Menu setShowCart={setShowCart} quantity={quantity} />
+    <div className={`container ${showMenu ? "overlay" : ""}`}>
+      <Menu
+        setShowCart={setShowCart}
+        setShowMenu={setShowMenu}
+        showMenu={showMenu}
+        quantity={quantity}
+      />
       {showCart && <Cart price={price} quantity={quantity} />}
       <main>
         <Slideshow data={data} />

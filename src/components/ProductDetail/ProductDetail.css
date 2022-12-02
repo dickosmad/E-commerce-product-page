@@ -120,6 +120,7 @@ button.add-btn:hover{
 @media (max-width: 1050px) {
     .product-detail-container{
         margin-left: 50px;
+        margin-top: 150px;
     }
     .product-detail-container h2{
         font-size: 2em;
@@ -132,7 +133,6 @@ button.add-btn:hover{
 }
 @media (max-width: 1000px) {
     .product-detail-container{
-       
         margin-top: 50px;
     }
   }

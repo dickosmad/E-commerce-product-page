@@ -3,7 +3,15 @@ header{
     justify-content: space-between;
     align-items: center;
     padding-bottom: 40px;
+    margin-top: 30px;
     border-bottom: 1px solid var(--light-gray-clr);
+}
+header button{
+    border:none;
+    outline: none;
+}
+header button:hover{
+    cursor: pointer;
 }
 nav{
     display: flex;
@@ -11,13 +19,27 @@ nav{
     align-items: center;
     gap: 3em;
 }
+.logo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+    margin-top: 7px;
+    margin-left: 10px;
+}
+.logo .burger-icon{
+    display: none;
+    margin-top: 5px;
+}
+
 
 nav ul{
     display: flex;
     list-style-type: none;
     gap: 1em;
     margin-top: 5px;
-    color: var(--dark-gray-clr)
+    color: var(--dark-gray-clr);
+    
 }
 nav ul li{
     position: relative;
@@ -40,6 +62,12 @@ nav ul li:hover{
  nav ul li:hover::before{
     display: block;
  }
+ ul .close-icon{
+    display: none;
+}
+ ul .close-icon.active{
+    display: block;
+}
 
 h1 {
     font-size: 2.2em;
@@ -66,9 +94,7 @@ h1 {
 .user-shopping-cart img:hover{
     cursor: pointer;
 }
-.cart-img:hover{
-    filter: invert(0%) sepia(100%) saturate(20%) hue-rotate(39deg) brightness(93%) contrast(107%);
-}
+
 
 .user-shopping-cart span {
     position: absolute;
@@ -82,4 +108,38 @@ h1 {
     padding: 1px 5px;
     color: white;
     font-size: 13px;
+}
+.vertical-nav{
+    display: flex;
+    list-style-type: none;
+    gap: 1em;
+    margin-top: 7px;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: -7px;
+    z-index: 20;
+    left: 0;
+    height: 70vh;
+    width: 40vw;
+    border-radius: 0px 13px 12px 0px;
+    transition: all 0.5s ease-in-out;
+}
+/* Media Queries */
+
+@media (max-width: 600px) {    
+    .logo .burger-icon{
+        display: block;
+    } 
+    nav ul li{
+    margin: 15px 15px;
+
+  }
+  nav ul li:hover::before{
+    display: none;
+ }
+ .nav-items{
+    display: none;
+ }
 }

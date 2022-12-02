@@ -38,6 +38,10 @@ article{
     left: 24px
 }
 @media (max-width: 1010px) {
+    article {
+        margin-top: 20px;
+        margin-left: 20px;
+      }
     .slideshow-image{
         display:flex;
         gap:1rem;
@@ -46,7 +50,19 @@ article{
         height: 500px;
         width: 730px;
     }
+    
+    .thumbnail-images-wrapper {
+        display: flex;
+        gap: 9px;
+        margin-top: 0px;
+        flex-direction: column;
   }
+  .thumbnail-image img {
+    height: 115px;
+    width: 115px;
+    border-radius: 15px;
+  }
+}
   @media (max-width: 1000px) {
     article{
         margin-top:50px;

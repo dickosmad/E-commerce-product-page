@@ -11,7 +11,7 @@ function App() {
   const [quantity, setQuantity] = useState(0);
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const handlePriceChange = (discount) => setPrice(discount);
 
   return (
@@ -22,9 +22,15 @@ function App() {
         showMenu={showMenu}
         quantity={quantity}
       />
-      {showCart && <Cart price={price} quantity={quantity} />}
+      {showCart && (
+        <Cart price={price} setShowCart={setShowCart} quantity={quantity} />
+      )}
       <main>
-        <Slideshow data={data} />
+        <Slideshow
+          data={data}
+          setShowModal={setShowModal}
+          showModal={showModal}
+        />
         <ProductDetail
           price={price}
           quantity={quantity}

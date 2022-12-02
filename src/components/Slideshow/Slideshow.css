@@ -10,7 +10,13 @@ article{
     width: 500px;
     border-radius: 15px;
 }
-
+.main-image img:hover{
+    cursor: pointer;
+}
+.active-image {
+    border:2px solid var(--orange-clr);
+    border-radius: 15px;
+}
 .thumbnail-images-wrapper{
     display:flex;
     gap:34px;
@@ -21,8 +27,14 @@ article{
     width: 100px;
     border-radius: 15px;
 }
+.thumbnail-image img:hover{
+    opacity: .7;
+}
 .main-image button{
     display:none;
+}
+.main-image button:hover svg{
+    fill:var(--pale-orange-clr);
 }
 .main-image button:hover{
     cursor: pointer;
@@ -132,4 +144,4 @@ article{
     }
 
    
-  }
+}

@@ -1,0 +1,72 @@
+.modal-wrapper {
+    position: absolute;
+    z-index: 100;
+    background: rgba(0,0,0,.795);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .modal-wrapper .modal-btn-close {
+    border: none;
+    outline: none;
+    background: none;
+    position: relative;
+    top: -54px;
+    left: 227px;
+  
+}
+.modal-wrapper .modal-btn-close svg{
+    transform-origin: left top;
+    transform: scale(1.5);
+}
+.modal-wrapper button:hover svg>path{
+    fill:orange;
+
+}
+  .modal-wrapper .main-image button{
+    display:block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: none;
+    padding: 5px;
+}
+.modal-wrapper .modal-btn-close:hover{
+    cursor: pointer;
+}
+  .modal-wrapper .main-image .next-arrow{  
+    position: absolute;
+    top: 40%;
+    right: -32px;
+}
+.modal-wrapper .main-image .previous-arrow{ 
+    position: absolute;
+    top: 40%;
+    left: -32px
+}
+
+@media (max-width: 720px) {    
+    .modal-wrapper{
+        display:none;
+    }
+}
+@media (max-width: 1010px) {
+   
+    .modal-wrapper .main-image  img{
+        height: 500px;
+        width: 500px;
+    }
+    
+    .modal-wrapper .thumbnail-images-wrapper {
+        display: flex;
+        flex-direction: row;
+        
+  }
+  
+}

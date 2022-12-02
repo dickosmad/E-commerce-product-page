@@ -2,9 +2,13 @@ import React from "react";
 
 import "./Cart.css";
 
-export default function Cart({ price, quantity }) {
+export default function Cart({ setShowCart, price, quantity }) {
   return (
-    <div className="cart">
+    <div
+      onMouseEnter={() => setShowCart(true)}
+      onMouseLeave={() => setShowCart(false)}
+      className="cart"
+    >
       <div className="cart-title">Cart</div>
       {quantity === 0 ? (
         <div className="cart-empty">

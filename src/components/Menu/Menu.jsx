@@ -60,10 +60,12 @@ export default function Menu({ quantity, showMenu, setShowCart, setShowMenu }) {
             <img
               alt="user-cart"
               className="cart-img"
-              onClick={() => setShowCart((prevState) => !prevState)}
+              onMouseEnter={() => setShowCart(true)}
               src="/images/icon-cart.svg"
             />
-            <span className="items-number">{quantity} </span>
+            {quantity !== 0 && (
+              <span className="items-number">{quantity} </span>
+            )}
           </div>
           <div className="user-avatar">
             <img src="/images/image-avatar.png" alt="user-avatar-image" />

@@ -146,3 +146,26 @@ article{
 
    
 }
+@media (max-width: 460px) {
+    article {
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+      .main-image img {
+        position: relative;
+        height: 380px;
+        width: 100vw;
+        border-radius: 0px;
+      }
+      .main-image .next-arrow {
+        position: absolute;
+        top: 36%;
+        right: 5px;
+      }
+      .main-image .previous-arrow {
+        position: absolute;
+        top: 36%;
+        left: 5px;
+      }
+
+}

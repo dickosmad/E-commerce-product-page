@@ -144,3 +144,37 @@ button.add-btn:hover{
         justify-content: space-between;
     }
   }
+  @media (max-width: 460px) {
+    .product-detail-container {
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+    .price {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+      }
+    .add-to-cart {
+        display: flex;
+        gap: 1rem;
+        margin-top: 28px;
+        flex-direction: column;
+    }
+    .quantity {
+        display: flex;
+        gap: 5px;
+        background-color: hsl(220deg 14% 75% / 47%);
+        border-radius: 5px;
+        justify-content: space-around;
+    }
+    .quantity input {
+        max-width: 60px;
+        border: none;
+        outline: none;
+        background: none;
+        height: 60px;
+    }
+  }

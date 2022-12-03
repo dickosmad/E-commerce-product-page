@@ -9,6 +9,7 @@ header{
 header button{
     border:none;
     outline: none;
+    background: none;
 }
 header button:hover{
     cursor: pointer;
